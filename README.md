@@ -1,2 +1,2 @@
-SRGFirstLunchHooker
+SRGAppVerWatcher
 ===================
