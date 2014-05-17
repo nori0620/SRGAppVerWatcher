@@ -17,8 +17,8 @@ typedef void (^SRGBlockAfterUpdate)(NSString *before, NSString *to);
 + (instancetype)sharedWatcher;
 
 - (void)watch;
-- (void)dispatchOnceAfterInstall:(SRGBlockAfterInstall)block;
-- (void)dispatchOnceAfterUpdate:(SRGBlockAfterUpdate)block;
+- (void)executeOnceAfterInstall:(SRGBlockAfterInstall)block;
+- (void)executeOnceAfterUpdate:(SRGBlockAfterUpdate)block;
 
 - (NSDate *)installDate;
 - (NSString *)installVersion;

@@ -24,10 +24,10 @@
     _appVerWatcher = [SRGAppVerWatcher sharedWatcher];
     
     __weak typeof(self) weakSelf = self;
-    [_appVerWatcher dispatchOnceAfterInstall:^{
+    [_appVerWatcher executeOnceAfterInstall:^{
         [weakSelf _showMessageOnInstall];
     }];
-    [_appVerWatcher dispatchOnceAfterUpdate:^(NSString *from,NSString *to){
+    [_appVerWatcher executeOnceAfterUpdate:^(NSString *from,NSString *to){
         [weakSelf _showMessageOnUpdateWithFrom:from
                                             to:to];
     }];

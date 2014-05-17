@@ -64,13 +64,13 @@ static NSString *PersistentHistoryKey = @"SRGAppVerWatcher.History";
 
 
 #pragma mark Dispatcher
-- (void)dispatchOnceAfterInstall:(SRGBlockAfterInstall)block{
+- (void)executeOnceAfterInstall:(SRGBlockAfterInstall)block{
     if( !_enableInstallDispatcher ){ return; }
     block();
     _enableInstallDispatcher = NO;
 }
 
-- (void)dispatchOnceAfterUpdate:(SRGBlockAfterUpdate)block{
+- (void)executeOnceAfterUpdate:(SRGBlockAfterUpdate)block{
     if( !_enableUpdateDispatcher  ){ return; }
     NSString *from = _versionHistory.previoustRecord.version;
     NSString *to   = _versionHistory.latestRecord.version;

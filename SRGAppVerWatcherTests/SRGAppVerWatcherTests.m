@@ -115,7 +115,7 @@
         [SRGAppVerWatcher sharedWatcher]
     ];
     OCMockObject *mock = (OCMockObject *)_watcher;
-    [[[mock stub] andReturn:version] _appVersion];
+    [[[mock expect] andReturn:version] _appVersion];
 }
 
 @end
