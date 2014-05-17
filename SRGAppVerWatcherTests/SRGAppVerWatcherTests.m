@@ -43,31 +43,31 @@
     
     [_watcher watch];
     
-    /* First dispatch after install */
+    /* First execute after install */
     __block BOOL isDispatched;
     isDispatched = NO;
-    [_watcher dispatchOnceAfterInstall:^{
+    [_watcher executeOnceAfterInstall:^{
         isDispatched = YES;
     }];
     XCTAssertTrue(isDispatched);
     
     isDispatched = NO;
-    [_watcher dispatchOnceAfterUpdate:^(NSString *from, NSString*to){
+    [_watcher executeOnceAfterUpdate:^(NSString *from, NSString*to){
         isDispatched = YES;
     }];
     XCTAssertFalse(isDispatched);
     XCTAssertTrue(_watcher.installDate);
     XCTAssertEqualObjects(_watcher.installVersion,@"1.0");
     
-    /* Second dispatch after install */
+    /* Second execute after install */
     isDispatched = NO;
-    [_watcher dispatchOnceAfterInstall:^{
+    [_watcher executeOnceAfterInstall:^{
         isDispatched = YES;
     }];
     XCTAssertFalse(isDispatched);
     
     isDispatched = NO;
-    [_watcher dispatchOnceAfterUpdate:^(NSString *from, NSString*to){
+    [_watcher executeOnceAfterUpdate:^(NSString *from, NSString*to){
         isDispatched = YES;
     }];
     XCTAssertFalse(isDispatched);
@@ -76,30 +76,30 @@
     [self _mockVersion:@"2.0"];
     [_watcher watch];
     
-    /* First dispatch after update */
+    /* First execute after update */
     isDispatched = NO;
-    [_watcher dispatchOnceAfterInstall:^{
+    [_watcher executeOnceAfterInstall:^{
         isDispatched = YES;
     }];
     XCTAssertFalse(isDispatched);
     
     isDispatched = NO;
-    [_watcher dispatchOnceAfterUpdate:^(NSString *from, NSString*to){
+    [_watcher executeOnceAfterUpdate:^(NSString *from, NSString*to){
         isDispatched = YES;
         XCTAssertEqualObjects(from,@"1.0");
         XCTAssertEqualObjects(to  ,@"2.0");
     }];
     XCTAssertTrue(isDispatched);
     
-    /* Second dispatch after update */
+    /* Second execute after update */
     isDispatched = NO;
-    [_watcher dispatchOnceAfterInstall:^{
+    [_watcher executeOnceAfterInstall:^{
         isDispatched = YES;
     }];
     XCTAssertFalse(isDispatched);
     
     isDispatched = NO;
-    [_watcher dispatchOnceAfterUpdate:^(NSString *from, NSString*to){
+    [_watcher executeOnceAfterUpdate:^(NSString *from, NSString*to){
         isDispatched = YES;
     }];
     XCTAssertFalse(isDispatched);
@@ -115,7 +115,7 @@
         [SRGAppVerWatcher sharedWatcher]
     ];
     OCMockObject *mock = (OCMockObject *)_watcher;
-    [[[mock expect] andReturn:version] _appVersion];
+    [[[mock stub] andReturn:version] _appVersion];
 }
 
 @end
