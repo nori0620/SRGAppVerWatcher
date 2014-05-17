@@ -42,7 +42,7 @@ You can get date an app is installed ( or update ).
 ```objc
 NSDate *installDate     = [[SRGAppVerWatcher sharedWatcher] installDate];
 NSDate *updateDate      = [[SRGAppVerWatcher sharedWatcher] updateDate];
-NSDate *updateDateVer3  = [[SRGAppVerWatcher sharedWatcher] updateDateOf:@"3.0];
+NSDate *updateDateVer3  = [[SRGAppVerWatcher sharedWatcher] updateDateOf:@"3.0"];
 ```
 
 You can get version when app is installed .
