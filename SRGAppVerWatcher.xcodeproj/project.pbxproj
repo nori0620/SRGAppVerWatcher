@@ -24,9 +24,9 @@
 		CCBF8C2619254E4B00CF012D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF8C1D19254E4B00CF012D /* main.m */; };
 		CCBF8C2719254E4B00CF012D /* SRGAppVerWatcher-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCBF8C1E19254E4B00CF012D /* SRGAppVerWatcher-Info.plist */; };
 		CCBF8C2819254E4B00CF012D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF8C2119254E4B00CF012D /* ViewController.m */; };
-		CCBF8C431926909900CF012D /* SRGAppVerWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF8C3E1926909900CF012D /* SRGAppVerWatcher.m */; };
-		CCBF8C441926909900CF012D /* SRGVersionHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF8C401926909900CF012D /* SRGVersionHistory.m */; };
-		CCBF8C451926909900CF012D /* SRGVersionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF8C421926909900CF012D /* SRGVersionRecord.m */; };
+		CCBF8C4D1927B72800CF012D /* SRGAppVerWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF8C481927B72800CF012D /* SRGAppVerWatcher.m */; };
+		CCBF8C4E1927B72800CF012D /* SRGVersionHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF8C4A1927B72800CF012D /* SRGVersionHistory.m */; };
+		CCBF8C4F1927B72800CF012D /* SRGVersionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF8C4C1927B72800CF012D /* SRGVersionRecord.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,12 +62,12 @@
 		CCBF8C1F19254E4B00CF012D /* SRGAppVerWatcher-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SRGAppVerWatcher-Prefix.pch"; sourceTree = "<group>"; };
 		CCBF8C2019254E4B00CF012D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CCBF8C2119254E4B00CF012D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CCBF8C3D1926909900CF012D /* SRGAppVerWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRGAppVerWatcher.h; sourceTree = "<group>"; };
-		CCBF8C3E1926909900CF012D /* SRGAppVerWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRGAppVerWatcher.m; sourceTree = "<group>"; };
-		CCBF8C3F1926909900CF012D /* SRGVersionHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRGVersionHistory.h; sourceTree = "<group>"; };
-		CCBF8C401926909900CF012D /* SRGVersionHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRGVersionHistory.m; sourceTree = "<group>"; };
-		CCBF8C411926909900CF012D /* SRGVersionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRGVersionRecord.h; sourceTree = "<group>"; };
-		CCBF8C421926909900CF012D /* SRGVersionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRGVersionRecord.m; sourceTree = "<group>"; };
+		CCBF8C471927B72800CF012D /* SRGAppVerWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRGAppVerWatcher.h; sourceTree = "<group>"; };
+		CCBF8C481927B72800CF012D /* SRGAppVerWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRGAppVerWatcher.m; sourceTree = "<group>"; };
+		CCBF8C491927B72800CF012D /* SRGVersionHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRGVersionHistory.h; sourceTree = "<group>"; };
+		CCBF8C4A1927B72800CF012D /* SRGVersionHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRGVersionHistory.m; sourceTree = "<group>"; };
+		CCBF8C4B1927B72800CF012D /* SRGVersionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRGVersionRecord.h; sourceTree = "<group>"; };
+		CCBF8C4C1927B72800CF012D /* SRGVersionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRGVersionRecord.m; sourceTree = "<group>"; };
 		D021F49F1F6D4260B6E95B94 /* libPods-SRGAppVerWatcherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SRGAppVerWatcherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +100,7 @@
 		CC70435F19254BF700180E2E = {
 			isa = PBXGroup;
 			children = (
+				CCBF8C461927B72700CF012D /* Classes */,
 				CCBF8C1519254E4A00CF012D /* SRGAppVerWatcher */,
 				CC70439019254BF700180E2E /* SRGAppVerWatcherTests */,
 				CC70436A19254BF700180E2E /* Frameworks */,
@@ -152,12 +153,6 @@
 		CCBF8C1519254E4A00CF012D /* SRGAppVerWatcher */ = {
 			isa = PBXGroup;
 			children = (
-				CCBF8C3D1926909900CF012D /* SRGAppVerWatcher.h */,
-				CCBF8C3E1926909900CF012D /* SRGAppVerWatcher.m */,
-				CCBF8C3F1926909900CF012D /* SRGVersionHistory.h */,
-				CCBF8C401926909900CF012D /* SRGVersionHistory.m */,
-				CCBF8C411926909900CF012D /* SRGVersionRecord.h */,
-				CCBF8C421926909900CF012D /* SRGVersionRecord.m */,
 				CCBF8C1619254E4B00CF012D /* AppDelegate.h */,
 				CCBF8C1719254E4B00CF012D /* AppDelegate.m */,
 				CCBF8C1819254E4B00CF012D /* Main.storyboard */,
@@ -170,6 +165,19 @@
 				CCBF8C2119254E4B00CF012D /* ViewController.m */,
 			);
 			path = SRGAppVerWatcher;
+			sourceTree = "<group>";
+		};
+		CCBF8C461927B72700CF012D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CCBF8C471927B72800CF012D /* SRGAppVerWatcher.h */,
+				CCBF8C481927B72800CF012D /* SRGAppVerWatcher.m */,
+				CCBF8C491927B72800CF012D /* SRGVersionHistory.h */,
+				CCBF8C4A1927B72800CF012D /* SRGVersionHistory.m */,
+				CCBF8C4B1927B72800CF012D /* SRGVersionRecord.h */,
+				CCBF8C4C1927B72800CF012D /* SRGVersionRecord.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,12 +345,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCBF8C451926909900CF012D /* SRGVersionRecord.m in Sources */,
+				CCBF8C4F1927B72800CF012D /* SRGVersionRecord.m in Sources */,
 				CCBF8C2819254E4B00CF012D /* ViewController.m in Sources */,
-				CCBF8C431926909900CF012D /* SRGAppVerWatcher.m in Sources */,
+				CCBF8C4D1927B72800CF012D /* SRGAppVerWatcher.m in Sources */,
 				CCBF8C2619254E4B00CF012D /* main.m in Sources */,
 				CCBF8C2219254E4B00CF012D /* AppDelegate.m in Sources */,
-				CCBF8C441926909900CF012D /* SRGVersionHistory.m in Sources */,
+				CCBF8C4E1927B72800CF012D /* SRGVersionHistory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
