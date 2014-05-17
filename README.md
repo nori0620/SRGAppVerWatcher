@@ -1,7 +1,4 @@
 SRGAppVerWatcher
-===================
-
-SRGAppVerWatcher
 ===========
 
 SRGAppVerWatcher detect app-install or app-update, and you can your run code  just   one time at  after app-install or app-updates by using blocks.
