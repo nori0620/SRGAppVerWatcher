@@ -32,7 +32,7 @@ static NSString *PersistentHistoryKey = @"SRGAppVerWatcher.History";
 - (instancetype)init {
     if( self = [super init]){
         _userDefaults = [NSUserDefaults standardUserDefaults];
-        [self _loadHistory];
+        [self p_loadHistory];
         [self watch];
     }
     return self;
@@ -44,22 +44,22 @@ static NSString *PersistentHistoryKey = @"SRGAppVerWatcher.History";
         !_versionHistory.isEmpty
             &&
         ![_versionHistory.latestRecord
-            isEqualVersionTo: [self _appVersion]
+            isEqualVersionTo: [self p_appVersion]
         ]
     );
     if( _enableInstallDispatcher || _enableUpdateDispatcher){
-        [self _addCurrentVersionToRecord];
+        [self p_addCurrentVersionToRecord];
     }
 }
 
-- (void) _addCurrentVersionToRecord {
+- (void) p_addCurrentVersionToRecord {
     [_versionHistory addRecord:
         [SRGVersionRecord
-            recordWithVersion:[self _appVersion]
-            date:[self _now]
+            recordWithVersion:[self p_appVersion]
+            date:[self p_now]
          ]
     ];
-    [self _persistHistory];
+    [self p_persistHistory];
 }
 
 
@@ -107,7 +107,7 @@ static NSString *PersistentHistoryKey = @"SRGAppVerWatcher.History";
 
 #pragma mark PrivateMethos/Persister
 
-- (void)_persistHistory {
+- (void)p_persistHistory {
     NSData *data = [NSKeyedArchiver
         archivedDataWithRootObject:_versionHistory
     ];
@@ -116,7 +116,7 @@ static NSString *PersistentHistoryKey = @"SRGAppVerWatcher.History";
     [_userDefaults synchronize];
 }
 
-- (void)_loadHistory {
+- (void)p_loadHistory {
     NSData *data = [_userDefaults objectForKey:PersistentHistoryKey];
     _versionHistory = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     if( !_versionHistory ){
@@ -126,19 +126,19 @@ static NSString *PersistentHistoryKey = @"SRGAppVerWatcher.History";
 
 
 #pragma mark Helpers
-- (NSString *) _appVersion {
+- (NSString *) p_appVersion {
     if( _fakedVersion ){ return _fakedVersion; }
     return  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
 }
 
-- (NSDate *) _now{
+- (NSDate *) p_now{
     return [NSDate date];
 }
 
 - (void)clear {
     [_userDefaults removeObjectForKey:PersistentHistoryKey];
     [_userDefaults synchronize];
-    [self _loadHistory];
+    [self p_loadHistory];
 }
 
 @end

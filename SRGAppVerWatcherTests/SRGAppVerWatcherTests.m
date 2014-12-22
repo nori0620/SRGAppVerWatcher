@@ -13,7 +13,7 @@
 
 @interface SRGAppVerWatcher (Mock)
 
-- (NSString *) _appVersion;
+- (NSString *) p_appVersion;
 
 @end
 
@@ -38,7 +38,7 @@
     
     /* Install Version */
     [_watcher clear];
-    [self _mockVersion:@"1.0"];
+    [self p_mockVersion:@"1.0"];
     
     
     [_watcher watch];
@@ -73,7 +73,7 @@
     XCTAssertFalse(isDispatched);
     
     /* Update Version */
-    [self _mockVersion:@"2.0"];
+    [self p_mockVersion:@"2.0"];
     [_watcher watch];
     
     /* First execute after update */
@@ -110,12 +110,12 @@
     XCTAssertFalse([_watcher updateDateOf:@"3.0"]);
 }
 
-- (void) _mockVersion:(NSString *)version {
+- (void) p_mockVersion:(NSString *)version {
     _watcher = [OCMockObject partialMockForObject:
         [SRGAppVerWatcher sharedWatcher]
     ];
     OCMockObject *mock = (OCMockObject *)_watcher;
-    [[[mock stub] andReturn:version] _appVersion];
+    [[[mock stub] andReturn:version] p_appVersion];
 }
 
 @end
