@@ -1,13 +1,18 @@
 SRGAppVerWatcher
 ===========
 
+[![CI Status](http://img.shields.io/travis/soragoto/SRGAppVerWatcher.svg?style=flat)](https://travis-ci.org/soragoto/SRGAppVerWatcher)
+[![Version](https://img.shields.io/cocoapods/v/SRGAppVerWatcher.svg?style=flat)](https://github.com/soragoto/SRGAppVerWatcher)
+[![License](https://img.shields.io/cocoapods/l/SRGAppVerWatcher.svg?style=flat)](https://github.com/soragoto/SRGAppVerWatcher)
+[![Platform](https://img.shields.io/cocoapods/p/SRGAppVerWatcher.svg?style=flat)](https://github.com/soragoto/SRGAppVerWatcher)
+
 SRGAppVerWatcher detect app-install or app-update, and you can your run code  just   one time at  after app-install or app-updates by using blocks.
 
 ## Installation
 
 Add the following line to your podfile and run `pod update`.
 ```ruby
-pod 'SRGAppVerWatcher', :git => 'https://github.com/soragoto/SRGAppVerWatcher.git', :tag => '0.0.1'
+pod 'SRGAppVerWatcher'
 ```
 
 ## Usage
@@ -53,3 +58,8 @@ NSString *installVersion = [[SRGAppVerWatcher sharedWatcher] installVersion];
 ## Notes
 
 SRGAppVerWatcher detect update or install by saving current version and compare previous version. So you need to install SRGAppVerWatcher from FIRST VERSION in your app, otherwise SRGAppVerWatcher can't distinguish between update and install.
+
+
+# LICENSE
+
+SRGAppVerWatcher is released under the MIT license. See LICENSE for details.
