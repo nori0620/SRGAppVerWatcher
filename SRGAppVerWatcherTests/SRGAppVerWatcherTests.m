@@ -7,7 +7,6 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <OCMock/OCMock.h>
 #import "SRGAppVerWatcherTests.m"
 #import "SRGAppVerWatcher.h"
 
@@ -22,6 +21,7 @@
 @end
 
 @implementation SRGAppVerWatcherTests {
+    BOOL _isMockWatcher;
     SRGAppVerWatcher *_watcher;
 }
 
@@ -111,11 +111,7 @@
 }
 
 - (void) p_mockVersion:(NSString *)version {
-    _watcher = [OCMockObject partialMockForObject:
-        [SRGAppVerWatcher sharedWatcher]
-    ];
-    OCMockObject *mock = (OCMockObject *)_watcher;
-    [[[mock stub] andReturn:version] p_appVersion];
+    [_watcher fakeCurrentVersion:version];
 }
 
 @end

@@ -27,6 +27,7 @@ typedef void (^SRGBlockAfterUpdate)(NSString *before, NSString *to);
 - (NSDate *)updateDateOf:(NSString *)version;
 
 - (void) clear;
+- (void) fakeCurrentVersion:(NSString *)version;
 
 
 @end

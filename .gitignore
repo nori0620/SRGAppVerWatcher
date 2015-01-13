@@ -5,3 +5,10 @@ Podfile.lock
 *.xcworkspace
 *.swp
 
+# Ruby
+#
+vendor
+Gemfile.lock
+.bundle
+
+

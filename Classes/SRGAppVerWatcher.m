@@ -124,6 +124,9 @@ static NSString *PersistentHistoryKey = @"SRGAppVerWatcher.History";
     }
 }
 
+- (void)fakeCurrentVersion:(NSString *)version {
+    _fakedVersion = version;
+}
 
 #pragma mark Helpers
 - (NSString *) p_appVersion {
